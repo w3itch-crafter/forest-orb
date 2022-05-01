@@ -230,6 +230,10 @@ let tpY = -1;
 let ignoredMapIds = [];
 
 // EXTERNAL
+function onWebJump(url) {
+  console.log("onWebJump: " + url);
+  window.open(url);
+}
 function onLoadMap(mapName) {
   let mapIdMatch = /^Map(\d{4})\.lmu$/.exec(mapName);
   if (mapIdMatch) {
